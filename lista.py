@@ -1,7 +1,7 @@
 class Lista:
-    lista = []
-    ind = 0
     def __init__(self):
+        self.lista = []
+        self.ind = 0
         pass
 
     def push_A(self,dato):
@@ -19,6 +19,7 @@ class Lista:
             return "Lista Vacia"
         else:
             self.lista.pop()
+            self.ind -= 1
 
     def show_A(self):                   
         for a in self.lista:
@@ -28,38 +29,40 @@ class Lista:
         if pos in range(0,len(self.lista)):
             ele = self.lista[pos-1]     
             self.lista = self.lista[0:pos-1] + self.lista[pos:]
-            return self.lista
+            self.ind -= 1
+            return ele
         else:
             return None
 
     def insertarElemento_A(self,pos,dato):
         if pos in range(0,len(self.lista)):
             self.lista.insert(pos,dato)
+            self.ind += 1
             return self.lista
         else:
             print("La posición {} no existe".format(pos))
         
-    def buscar(self,buscado):
+    def buscar_A(self,buscado):
         try:
             c=self.lista.index(buscado)
             print(c+1)
         except ValueError as e:
             print("Error: ",e)
     
-numeros = Lista()
-numeros.push_A("Ana")
-numeros.push_A("Daniel")
-numeros.push_A("Jose")
-numeros.push_A("Miguel")
-numeros.push_A("Moises")
-#print(numeros.obtener())
-print(numeros.lista)
-print (numeros.eliminarElemento_A(3))
-print(numeros.lista)
-numeros.insertarElemento_A(0,"Andrés")
-#print(resp if resp else "posicion:{} no valida".format(5))
-print(numeros.pop_A())
-print(numeros.pop_A())
-print(numeros.pop_A())
-#print(resp)
-print(numeros.lista)
+# numeros = Lista()
+# numeros.push_A("Ana")
+# numeros.push_A("Daniel")
+# numeros.push_A("Jose")
+# numeros.push_A("Miguel")
+# numeros.push_A("Moises")
+# #print(numeros.obtener())
+# print(numeros.lista)
+# print (numeros.eliminarElemento_A(3))
+# print(numeros.lista)
+# numeros.insertarElemento_A(0,"Andrés")
+# #print(resp if resp else "posicion:{} no valida".format(5))
+# print(numeros.pop_A())
+# print(numeros.pop_A())
+# print(numeros.pop_A())
+# #print(resp)
+# print(numeros.lista)
