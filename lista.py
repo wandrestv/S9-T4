@@ -2,7 +2,6 @@ class Lista:
     def __init__(self):
         self.lista = []
         self.ind = 0
-        pass
 
     def push_A(self,dato):
         self.lista.append(dato)

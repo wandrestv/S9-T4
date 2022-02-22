@@ -56,12 +56,9 @@ while True:
             if opc_1 == "1":
                 di2 = input("Dato a ingresar: ")
                 b1.push_B(di2)
-                #print(Pila.lista)
                 input("Presione una tecla para continuar")
             elif opc_1 == "2":
-                #b4 = Pila(5)
                 b1.pop_B()
-                #print(Pila.pila)
                 input("Se eliminó un dato de la lista, presione cualquier tecla para continuar")
             elif opc_1 == "3":
                 print("*"*10,"Mostrando la lista","*"*10)
@@ -88,12 +85,9 @@ while True:
             if opc_1 == "1":
                 di3 = input("Dato a ingresar: ")
                 c1.push_C(di3)
-                #print(Pila.lista)
                 input("Presione una tecla para continuar")
             elif opc_1 == "2":
-                #b4 = Pila(5)
                 c1.pop_C()
-                #print(Pila.pila)
                 input("Se eliminó un dato de la lista, presione cualquier tecla para continuar")
             elif opc_1 == "3":
                 print("*"*10,"Mostrando la lista","*"*10)
